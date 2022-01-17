@@ -3,8 +3,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 from datetime import datetime
 from sklearn.linear_model import LinearRegression
-from fredapi import Fred
-
 
 
 def z_score(data,time_line):
@@ -19,9 +17,9 @@ def basic_model():
     time_line = 36
     criteria_line = 0
 
-    cycle_data = pd.read_excel('total.xlsx',sheet_name='markit_pmis',index_col='Date')
-    momentum_data = pd.read_excel('total.xlsx',sheet_name='fx_monthly',index_col='Date')
-    yield_diff_data = pd.read_excel('total.xlsx',sheet_name='st_yield_diff',index_col='Date')
+    cycle_data = pd.read_excel('./data/total.xlsx',sheet_name='markit_pmis',index_col='Date')
+    momentum_data = pd.read_excel('./data/total.xlsx',sheet_name='fx_monthly',index_col='Date')
+    yield_diff_data = pd.read_excel('./data/total.xlsx',sheet_name='st_yield_diff',index_col='Date')
 
     k = 0
 
